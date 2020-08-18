@@ -5,6 +5,11 @@
 
 - csmuCrawer
   - News
+    - get()
+  - ILms
+    - CheckAccount()
+
+---
 
 ## (Class) News
 
@@ -20,9 +25,9 @@ news = News("today") #取得今日公告
 news = News("yesterday") #取得昨日公告
 news = News("%Y/%m/%d") #取得特定日期公告
 ```
-### 取得資料
+### `get()`
 
-> `get()`    
+> 取得資料 
 > Return JSON format string
 
 ```python
@@ -50,3 +55,21 @@ news.get()
 ```
 
 ---
+
+## (Class) ILms
+
+### CheckAccount(user, password)
+> 檢查帳號密碼是否正確   
+> 參數: `user` = "帳號"; `password` = "密碼"      
+    
+     
+### Return Format
+`bool` (成功為 True / 失敗為 False)
+
+---
+
+### GetSession()
+> 取得帳戶登入後的PHP session
+
+### Return format
+`str` (26碼 PHP SESSION)
